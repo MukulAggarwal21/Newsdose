@@ -12,7 +12,7 @@ export class Newsitem extends Component {
          <span class="position-absolute top-0  translate-middle badge rounded-pill bg-danger" style= {{left :'85%' ,  zIndex: '1'}}>{source}
   </span>
         {/* to make js we use first { } and then to make it object we use another {} */}
-  <img src={!imageUrl? "https://wallpaperaccess.com/full/2112558.jpg "  : imageUrl} className="card-img-top " height="200px" alt="..."/>
+  <img src={!imageUrl? "https://wallpaperaccess.com/full/2112558.jpg "  : imageUrl} className="card-img-top " height="200px" alt="...."/>
   <div className="card-body">
     <h5 className="card-title">{title}  
  
