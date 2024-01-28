@@ -1,8 +1,8 @@
 
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export class Newsitem extends Component {
-
 
   render() {
      let {title,description , imageUrl ,newsUrl , author ,date,source }= this.props;
@@ -19,7 +19,16 @@ export class Newsitem extends Component {
   </h5>
     <p className="card-text">{description}</p>
     <p class="card-text"><small className="text-body-secondary">By {!author?"Unknown":author} on {new Date(date).toGMTString()}</small></p>
-    <a  rel='noreferrer' href={newsUrl}  target="_blank" className="btn btn-sm btn-dark">Read More</a>
+<a rel='noreferrer' href={newsUrl} target="_blank" className="btn btn-sm btn-dark">
+  Read More
+</a>
+{newsUrl && (
+  <Link to={`/summary/${encodeURIComponent(newsUrl)}`} className="btn btn-sm btn-dark ms-5">
+    Summarise it!!
+  </Link>
+)}
+
+
   </div>
   </div>
   </div>
